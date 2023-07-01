@@ -1,0 +1,7 @@
+<div class = "container">
+<h3>イベントや情景、気持ちを入力してみよう</h3>
+<%= form_with url: musics_search_path, method: :get, local: true do |form| %>
+	<%= form.text_field :search, placeholder: "ドライブ、海、失恋..."%>
+	<!--%= form.submit 'アーティスト名検索', name: nil %-->
+<% end %>
+</div>

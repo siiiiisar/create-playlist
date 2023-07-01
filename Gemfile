@@ -7,6 +7,10 @@ ruby "3.1.4"
 gem "rails", "~> 7.0.5"
 
 gem "devise"
+gem 'omniauth-spotify'
+gem 'omniauth-rails_csrf_protection'
+gem 'rspotify', "2.11.1"
+gem 'dotenv-rails'
 
 gem "bootstrap-sass"
 
