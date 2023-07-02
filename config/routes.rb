@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'musics/index'
   get 'musics/search'
   get 'musics/show'
+  get 'musics/create'
   devise_for :users, controllers: {
       omniauth_callbacks: "users/omniauth_callbacks"
   }

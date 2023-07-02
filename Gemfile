@@ -6,6 +6,8 @@ ruby "3.1.4"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
 
+gem "ruby-openai"
+
 gem "devise"
 gem 'omniauth-spotify'
 gem 'omniauth-rails_csrf_protection'

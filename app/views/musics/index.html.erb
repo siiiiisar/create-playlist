@@ -1,7 +1,22 @@
 <div class = "container">
-<h3>イベントや情景、気持ちを入力してみよう</h3>
+<h3>イベントや情景、気持ちを入力してプレイリストを作成しましょう。</h3>
 <%= form_with url: musics_search_path, method: :get, local: true do |form| %>
-	<%= form.text_field :search, placeholder: "ドライブ、海、失恋..."%>
-	<!--%= form.submit 'アーティスト名検索', name: nil %-->
+	<%= form.text_field :query, placeholder: "ドライブ、海、失恋..."%>
+	<%= form.submit 'プレイリスト生成', name: nil %>
 <% end %>
+
+  <h3>ChatGPTが生成したプレイリスト</h3>
+  <br>
+  <% if @track_info.present? %>
+  	<% @track_info.each_with_index do |list, i| %>
+  		<%= i + 1 %>:
+  		<%= list.name %><br>
+  		<%= list.external_urls["spotify"] %><br>
+  	<% end %>
+  	<%= form_with url: musics_path, method: :post, local: true do |form| %>
+  		<%= form.submit 'この内容でプレイリストを作成', name: nil %>
+  		<!--%= hidden_field_tag info: @track_info %-->
+  	<% end %>
+  <% end %>
+  <br>
 </div>
