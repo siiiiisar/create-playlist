@@ -1,0 +1,13 @@
+<div class="center jumbotron">
+  <h1>Create Playlist!</h1>
+
+  <h2>
+    Whenever create playlist.
+  </h2>
+
+  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+
+  <% if @user.present? %>
+    <p><%= @user %></p>
+  <% end %>
+</div>

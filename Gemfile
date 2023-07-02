@@ -6,6 +6,16 @@ ruby "3.1.4"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
 
+gem "ruby-openai"
+
+gem "devise"
+gem 'omniauth-spotify'
+gem 'omniauth-rails_csrf_protection'
+gem 'rspotify', "2.11.1"
+gem 'dotenv-rails'
+
+gem "bootstrap-sass"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -43,7 +53,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -51,6 +61,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do

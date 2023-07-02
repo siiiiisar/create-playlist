@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'musics/index'
+  get 'musics/search'
+  get 'musics/show'
+  get 'musics/create'
+  devise_for :users, controllers: {
+      omniauth_callbacks: "users/omniauth_callbacks"
+  }
+  get 'home/index'
+  root to: "home#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :musics do
+       collection {get "search"}
+  end
 end
