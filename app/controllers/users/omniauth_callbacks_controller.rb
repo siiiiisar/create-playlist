@@ -11,10 +11,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.find_for_Spotify(request.env['omniauth.auth'])
 
     if @user.persisted?
-      flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: provider.capitalize)
+      flash[:notice] = "ログインに成功しました。"
       sign_in @user, event: :authentication
       redirect_to musics_path
     else
+      flash[:notice] = "既にログインしています。"
       session["devise.#{provider}_data"] = request.env['omniauth.auth']
       redirect_to new_user_registration_url
     end

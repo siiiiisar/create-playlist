@@ -35,5 +35,6 @@ class MusicsController < ApplicationController
   end
 
   def create
+    
   end
 end
