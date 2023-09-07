@@ -4,13 +4,8 @@
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in?  %>
-<<<<<<< HEAD
               <li><%= link_to "プレイリストを作成する", musics_index_path %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-=======
-              <li><%= link_to "music", musics_index_path %></li>
-              <li><%= link_to "ログアウト", destroy_user_session_path %></li>
->>>>>>> origin/main
             <% else %>
               <li><%= link_to "ログイン", new_user_session_path %></li>
               <li><%= link_to "新規登録", new_user_registration_path %></li>
