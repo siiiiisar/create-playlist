@@ -83,3 +83,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+<<<<<<< HEAD
+=======
+
+gem "shakapacker", "= 7.0"
+>>>>>>> origin/main

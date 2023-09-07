@@ -197,6 +197,11 @@ GEM
     rack (2.2.7)
     rack-protection (3.0.6)
       rack
+<<<<<<< HEAD
+=======
+    rack-proxy (0.7.6)
+      rack
+>>>>>>> origin/main
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.5)
@@ -276,6 +281,15 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+<<<<<<< HEAD
+=======
+    semantic_range (3.0.0)
+    shakapacker (7.0.0)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
+>>>>>>> origin/main
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
@@ -343,6 +357,10 @@ DEPENDENCIES
   ruby-openai
   sassc-rails
   selenium-webdriver
+<<<<<<< HEAD
+=======
+  shakapacker (= 7.0)
+>>>>>>> origin/main
   sprockets-rails
   stimulus-rails
   turbo-rails

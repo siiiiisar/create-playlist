@@ -1,4 +1,5 @@
 <div class = "container">
+<<<<<<< HEAD
 <h1><b>autoPLAYLIST</b></h1>
 <h2>
 	<b>/music/index</b>
@@ -11,6 +12,12 @@
 	<%= form.text_area :query, placeholder: "(例)：ドライブ、海、失恋...", size: "150x10"%>
 	</br>
 	<%= form.submit 'プレイリスト生成', class: "btn btn-lg btn-primary"%>
+=======
+<h3>イベントや情景、気持ちを入力してプレイリストを作成しましょう。</h3>
+<%= form_with url: musics_search_path, method: :get, local: true do |form| %>
+	<%= form.text_field :query, placeholder: "ドライブ、海、失恋..."%>
+	<%= form.submit 'プレイリスト生成', name: nil %>
+>>>>>>> origin/main
 <% end %>
 
   <h3>ChatGPTが生成したプレイリスト</h3>
