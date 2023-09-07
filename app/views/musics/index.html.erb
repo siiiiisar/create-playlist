@@ -1,0 +1,30 @@
+<div class = "container">
+<h1><b>autoPLAYLIST</b></h1>
+<h2>
+	<b>/music/index</b>
+</h2>
+<div>
+
+<div class = "container">
+<h3>プロンプトを入力してプレイリストを作成しましょう。</h3>
+<%= form_with url: musics_search_path, method: :get, local: true do |form| %>
+	<%= form.text_area :query, placeholder: "(例)：ドライブ、海、失恋...", size: "150x10"%>
+	</br>
+	<%= form.submit 'プレイリスト生成', class: "btn btn-lg btn-primary"%>
+<% end %>
+
+  <h3>ChatGPTが生成したプレイリスト</h3>
+  <br>
+  <% if @track_info.present? %>
+  	<% @track_info.each_with_index do |list, i| %>
+  		<%= i + 1 %>:
+  		<%= list.name %><br>
+  		<%= list.external_urls["spotify"] %><br>
+  	<% end %>
+  	<%= form_with url: musics_path, method: :post, local: true do |form| %>
+  		<%= form.submit 'この内容でプレイリストを作成', name: nil %>
+  		<!--%= hidden_field_tag info: @track_info %-->
+  	<% end %>
+  <% end %>
+  <br>
+</div>
