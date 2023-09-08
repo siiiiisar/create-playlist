@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "home#index"
+  get '/home', to: 'home#index'
   get 'musics/index'
   get 'musics/search'
   get 'musics/show'
@@ -6,8 +8,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
       omniauth_callbacks: "users/omniauth_callbacks"
   }
-  get 'home/index'
-  root to: "home#index"
+ 
 
   resources :musics do
        collection {get "search"}
